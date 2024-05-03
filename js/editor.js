@@ -12,7 +12,6 @@ import {
     CommandGUI,
     HelpGUI,
     VersionGUI,
-    DonateGUI,
     FileToolsGUI,
     ElementToolsGUI,
     TransformToolsGUI,
@@ -35,7 +34,6 @@ import {
 } from './commands/commands.js';
 
 import { BlockDisplay, ItemDisplay, TextDisplay, Collection } from './elements/elements.js';
-import { assetsPath } from './elements/BlockDisplay.js';
 import { compressJSON, decompressJSON } from './utils.js';
 
 let renderer, scene, currentCamera, viewHelper, viewHelperRenderer;
@@ -105,12 +103,11 @@ class Editor {
         let help = new HelpGUI(this,{ autoPlace: false, title: 'Help', container: this.domElement });
 
         let command = new CommandGUI(this,{autoplace: false, title: 'Export', container: this.domElement});
-        let version = new VersionGUI(this,{autoplace: false, title: 'Welcome to BDStudio!', container: this.domElement});
-        let donate = new DonateGUI(this,{autoplace: false, title: 'Enjoy using BDStudio?', container: this.domElement});
+        let version = new VersionGUI(this,{autoplace: false, title: 'Welcome to DisplayMc!', container: this.domElement});
 
         let transform = new TransformToolsGUI(this,{autoplace: false, title: '', container: left_tool_strip}, true);
         let misc = new MiscGUI(this, {autoplace: false, title: '', container: top_tool_strip}, false);
-        let loading = new LoadingGUI(this).show('BDStudio');
+        let loading = new LoadingGUI(this).show('DisplayMc');
 
         this.gui = {
             elementTools: elementTools, 
@@ -127,7 +124,6 @@ class Editor {
             misc: misc, 
             command: command, 
             version: version,
-            donate: donate,
             transform: transform, 
             loading: loading, 
         }
@@ -307,7 +303,7 @@ class Editor {
             passengers[counter] += `${object.toNBT()},`;
         }
 
-        let mcfunction = `# ${this.objects.name} created via BDStudio\n# https://eszesbalint.github.io/bdstudio\n\n`;
+        let mcfunction = `# ${this.objects.name} created via DisplayMc\n# https://eszesbalint.github.io/DisplayMc\n\n`;
         for (let [i, passenger] of passengers.entries()) {
             passenger = passenger.slice(0, -1);
             const command = `execute at @s run summon block_display ~ ~ ~ {Passengers:[${passenger}]}`;
@@ -329,7 +325,7 @@ class Editor {
         // Create a programmatic download link
         const elem = window.document.createElement("a");
         elem.href = window.URL.createObjectURL(new Blob([compressed]));
-        elem.download = `${this.objects.name}.bdstudio`;
+        elem.download = `${this.objects.name}.DisplayMc`;
         document.body.appendChild(elem);
         elem.click();
         document.body.removeChild(elem);
@@ -368,7 +364,7 @@ class Editor {
                     scope.gui.loading.hide();
                 } catch (error) {
                     console.log(error);
-                    alert('File is not a valid a .bdstudio file!');
+                    alert('File is not a valid a .DisplayMc file!');
                     scope.gui.loading.hide();
                     return;
                 }

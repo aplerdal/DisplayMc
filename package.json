@@ -1,0 +1,19 @@
+{
+    "name": "display-mc",
+    "version": "1.0.0",
+    "description": "A display entity for Minecraft",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Antimattur",
+    "license": "GPL-3.0-only",
+    "dependencies": {
+        "bootstrap-icons": "^1.11.3",
+        "lil-gui": "^0.19.2",
+        "three": "^0.164.1"
+    },
+    "devDependencies": {
+        "vite": "^5.2.11"
+    }
+}

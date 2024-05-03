@@ -7,10 +7,6 @@ import { loadModel } from './modelLoader';
 import { intersectDictionaries, mergeDictionaries } from '../utils';
 
 const assetsPath = '1.20/assets/minecraft/';
-const placeholderAssetsPath = 'placeholder/assets/minecraft/';
-
-
-
 
 class BlockDisplay extends Selectable {
     static loadedModels = {}

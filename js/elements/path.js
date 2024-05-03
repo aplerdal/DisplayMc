@@ -1,5 +1,5 @@
 class ResourcePath {
-    basePath = '1.20'
+    basePath = '/displaymc/1.20'
     constructor(string, subfolder, extention) {
         if (string.includes(':')) {
             this.namespace = string.split(':')[0];

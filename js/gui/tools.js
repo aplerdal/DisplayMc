@@ -227,7 +227,7 @@ export class MiscGUI extends ToolsGUI {
                 'tooltip': 'Report a bug!',
                 'icon': 'bug-fill',
                 'function': function () { 
-                    window.open('https://github.com/eszesbalint/bdstudio/issues', '_blank');
+                    window.open('https://github.com/eszesbalint/DisplayMc/issues', '_blank');
                 },
             },
             {
@@ -271,7 +271,7 @@ export class VersionToolsGUI extends ToolsGUI {
     constructor(editor, args) {
         let functions = [
             {
-                'title': 'BDStudio',
+                'title': 'DisplayMc',
                 'tooltip': 'New Project',
                 'icon': 'file-earmark-plus',
                 'function': function () {

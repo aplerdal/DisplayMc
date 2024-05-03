@@ -96,7 +96,7 @@ class BlockSearchGUI extends SearchGUI {
     }
 
     async updateItems(){
-        let response = await fetch(assetsPath + 'blockstates.json');
+        let response = await fetch("/displaymc/"+assetsPath + 'blockstates.json');
         let json = await response.json();
         this.items = json['blockstates'];
         this.update();
@@ -148,7 +148,7 @@ class ItemSearchGUI extends SearchGUI {
     }
 
     async updateItems(){
-        let response = await fetch(assetsPath + 'items.json');
+        let response = await fetch("/displaymc/"+assetsPath + 'items.json');
         let json = await response.json();
         this.items = json['items'];
         this.update();

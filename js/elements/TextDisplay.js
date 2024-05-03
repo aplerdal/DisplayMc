@@ -374,7 +374,7 @@ class UniFont extends FontProvider {
 
     async loadUnifontHex(fileUrl) {
         try {
-            const response = await fetch(fileUrl);
+            const response = await fetch("/displaymc/"+fileUrl);
             const text = await response.text();
             const lines = text.split('\n').map(line => line.trim());
             let data = [];
