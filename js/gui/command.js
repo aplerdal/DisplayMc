@@ -69,7 +69,7 @@ class CommandGUI extends ModalGUI {
             {
                 'title': `Save ${scope.editor.objects.name}`,
                 'tooltip': `Save ${scope.editor.objects.name}`,
-                'icon': 'save',
+                'icon': 'floppy',
                 'function': async function () {
                     editor.saveBlockDisplaysToFile();
                 },
@@ -77,7 +77,7 @@ class CommandGUI extends ModalGUI {
             {
                 'title': `Export ${scope.editor.objects.name} as mcfunction`,
                 'tooltip': `Export ${scope.editor.objects.name} as mcfunction`,
-                'icon': 'file-earmark-code',
+                'icon': 'box-arrow-up',
                 'function': async function () {
                     scope.editor.exportMcfunction();
                 },

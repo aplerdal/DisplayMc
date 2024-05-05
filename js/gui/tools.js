@@ -45,7 +45,6 @@ export class FileToolsGUI extends ToolsGUI {
             {
                 'title': 'Load',
                 'tooltip': 'Load',
-                'icon': 'folder2-open',
                 'function': async function () {
                     editor.history.clear();
                     await editor.loadBlockDisplaysFromFile();
@@ -54,14 +53,11 @@ export class FileToolsGUI extends ToolsGUI {
             {
                 'title': 'Save',
                 'tooltip': 'Save',
-                'icon': 'save',
                 'function': function () { editor.saveBlockDisplaysToFile() },
             },
             {
                 'title': 'New',
                 'tooltip': 'New Project',
-                'icon': 'file-earmark-fill',
-                'secondary_icon': 'plus-circle-fill',
                 'function': function () { 
                     editor.control.detach(); 
                     editor.new(); 
@@ -97,21 +93,19 @@ export class ElementToolsGUI extends ToolsGUI {
             {
                 'title': 'Blocks',
                 'tooltip': 'Add Block Display',
-                'icon': 'box-fill',
-                'secondary_icon': 'search',
+                'icon': 'box',
                 'function': function () { editor.gui.blockSearch.showModal() },
             },
             {
                 'title': 'Items',
                 'tooltip': 'Add Item Display',
                 'icon': 'gem',
-                'secondary_icon': 'search',
                 'function': function () { editor.gui.itemSearch.showModal() },
             },
             {
                 'title': 'Text',
                 'tooltip': 'Add Text Display',
-                'icon': 'textarea-t',
+                'icon': 'textarea',
                 'function': async function () { 
                     let object = await editor.add('Enter Text', 'TextDisplay');
                     object.selected = true;
@@ -283,7 +277,7 @@ export class VersionToolsGUI extends ToolsGUI {
 
         let button = this.controllers[0];
         button.domElement.getElementsByClassName('name')[0].innerHTML = `
-                <img src="images/logo_28x28.png" width="28" height="28">
+                <img src="/displaymc/images/logo.png" width="28" height="28">
                 ${functions[0]['title']?`<span>${functions[0]['title']}</span>`:''}
                 `;
     }

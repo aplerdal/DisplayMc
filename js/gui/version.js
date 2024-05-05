@@ -34,9 +34,6 @@ export class VersionGUI extends ModalGUI {
                 <a href="${json.release_notes_link}">Release notes</a> <br>
                 <p>This is not an official Minecraft tool. Not approved by or associated with Mojang or Microsoft</p>
             </div>
-            <div class="logo">
-                <img src="images/logo_update_256x256.png">
-            </div>
         `;
         scope.domElement.appendChild(titleCard);
         

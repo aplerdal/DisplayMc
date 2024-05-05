@@ -4,14 +4,15 @@
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family-mono: Menlo, Monaco, Consolas, "Droid Sans Mono", monospace;
 
-    --neon-blue: #2e5fffff;
-    --picton-blue: #34b7feff;
-    --spring-green: #3dff71ff;
-    --sunglow: #ffd147ff;
-    --pumpkin: #ff751aff;
-    --rose: #ff297eff;
 
-    --margin: 18px;
+    --neon-blue: #2e5fff;
+    --picton-blue: #34b7fe;
+    --spring-green: #44c566;
+    --sunglow: #ffd147;
+    --pumpkin: #ff751a;
+    --rose: #ce3673;
+
+    --margin: 2px;
 }
 
 html,
@@ -69,15 +70,15 @@ body {
 .lil-gui {
     --font-size: 9pt;
     --input-font-size: 9pt;
-    --background-color: #000000;
-    --text-color: #ababab;
-    --title-background-color: #0d0d0d;
+    --background-color: #0F111A;
+    --text-color: #9999ad;
+    --title-background-color: #0F111A;
     --title-text-color: #d9d9d9;
-    --widget-color: #0d0d0d;
-    --hover-color: #212121;
-    --focus-color: #292929;
-    --number-color: var(--rose);
-    --string-color: var(--spring-green);
+    --widget-color: #1A1C25;
+    --hover-color: #464B5D;
+    --focus-color: #464B5D;
+    --number-color: #C3E88D;
+    --string-color: #bb80b3;
     border-radius: 4pt;
 }
 
@@ -179,11 +180,6 @@ body {
 #top_container>* {
     height: fit-content;
 }
-
-
-
-
-
 
 #top_tool_strip {
     display: flex;
