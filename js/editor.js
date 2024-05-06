@@ -15,7 +15,6 @@ import {
     FileToolsGUI,
     ElementToolsGUI,
     TransformToolsGUI,
-    HistoryToolsGUI,
     FlipToolsGUI,
     LoadingGUI,
     MiscGUI,
@@ -95,7 +94,6 @@ class Editor {
 
         let versionTools = new VersionToolsGUI(this,{autoplace: false, title: '', container: top_tool_strip});
         let fileTools = new FileToolsGUI(this,{autoplace: false, title: '', container: top_tool_strip});
-        let historyTools = new HistoryToolsGUI(this,{autoplace: false, title: '', container: top_tool_strip});
         let exportTools = new ExportToolsGUI(this,{autoplace: false, title: '', container: top_tool_strip});
 
         let blockSearch = new BlockSearchGUI(this,{autoplace: false, title: 'Block search', container: this.domElement});
@@ -119,7 +117,6 @@ class Editor {
             help: help,
             versionTools: versionTools, 
             fileTools: fileTools, 
-            historyTools: historyTools, 
             exportTools: exportTools, 
             misc: misc, 
             command: command, 
@@ -303,7 +300,7 @@ class Editor {
             passengers[counter] += `${object.toNBT()},`;
         }
 
-        let mcfunction = `# ${this.objects.name} created via DisplayMc\n# https://eszesbalint.github.io/DisplayMc\n\n`;
+        let mcfunction = `# ${this.objects.name} created via DisplayMc\n# https://aplerdal.github.io/displaymc\n\n`;
         for (let [i, passenger] of passengers.entries()) {
             passenger = passenger.slice(0, -1);
             const command = `execute at @s run summon block_display ~ ~ ~ {Passengers:[${passenger}]}`;

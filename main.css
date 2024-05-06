@@ -12,7 +12,7 @@
     --pumpkin: #ff751a;
     --rose: #ce3673;
 
-    --margin: 2px;
+    --margin: 0px;
 }
 
 html,
@@ -74,11 +74,11 @@ body {
     --text-color: #9999ad;
     --title-background-color: #0F111A;
     --title-text-color: #d9d9d9;
-    --widget-color: #1A1C25;
+    --widget-color: #1c202e;
     --hover-color: #464B5D;
     --focus-color: #464B5D;
-    --number-color: #C3E88D;
-    --string-color: #bb80b3;
+    --number-color: #7acaff;
+    --string-color: #b47bff;
     border-radius: 4pt;
 }
 
@@ -144,6 +144,11 @@ body {
     overflow-y: scroll;
 
     scrollbar-width: none;
+    background-color: #0F111A;
+
+    border-left-width: 4px;
+    border-left-color: #1f2336;
+    border-left-style:ridge;
 }
 
 #side_container::-webkit-scrollbar {
@@ -185,6 +190,11 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    background-color: #0F111A;
+    border-bottom-width: 4px;
+    border-bottom-color: #1f2336;
+    border-bottom-style:ridge;
 }
 
 .toolsGUI {

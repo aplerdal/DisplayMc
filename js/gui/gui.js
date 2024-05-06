@@ -6,7 +6,7 @@ import { CommandGUI } from './command.js';
 import { HelpGUI } from './help.js';
 import { LoadingGUI } from './loading.js';
 import { VersionGUI } from './version.js';
-import { FileToolsGUI, ElementToolsGUI, TransformToolsGUI, HistoryToolsGUI, FlipToolsGUI, MiscGUI, ExportToolsGUI, VersionToolsGUI } from './tools.js';
+import { FileToolsGUI, ElementToolsGUI, TransformToolsGUI, FlipToolsGUI, MiscGUI, ExportToolsGUI, VersionToolsGUI } from './tools.js';
 
 export { ElementsGUI };
 export { PropertiesGUI };
@@ -16,4 +16,4 @@ export { CommandGUI };
 export { HelpGUI };
 export { LoadingGUI };
 export { VersionGUI };
-export { FileToolsGUI, ElementToolsGUI, TransformToolsGUI, HistoryToolsGUI, FlipToolsGUI, MiscGUI, ExportToolsGUI, VersionToolsGUI };
+export { FileToolsGUI, ElementToolsGUI, TransformToolsGUI, FlipToolsGUI, MiscGUI, ExportToolsGUI, VersionToolsGUI };

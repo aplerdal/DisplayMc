@@ -54,32 +54,12 @@ class Scene {
         axesHelper2.setColors(red, green, blue);
         editor.scene.add(axesHelper1);
         editor.scene.add(axesHelper2);
-
-        // Adding box helper
-        const box = new THREE.Box3();
-        box.setFromCenterAndSize(new THREE.Vector3(0.5, 0.5, 0.5), new THREE.Vector3(0.999, 0.999, 0.999));
-        const helper = new THREE.Box3Helper(box, 0x444444);
-        editor.scene.add(helper);
-
         // Lights
 
         editor.scene.add(new THREE.AmbientLight(0xCCCCCC));
         const light = new THREE.DirectionalLight(0xffffff, 0.5);
         light.position.set(1, 1.5, 0.5);
         editor.scene.add(light);
-
-
-
-        
-        
-
-        
-
-        
-
-        
-
-        
     }
 }
 

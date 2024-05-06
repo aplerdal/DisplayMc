@@ -69,24 +69,6 @@ export class FileToolsGUI extends ToolsGUI {
     }
 }
 
-export class HistoryToolsGUI extends ToolsGUI {
-    constructor(editor, parentDom) {
-        let functions = [
-            {
-                'tooltip': 'Undo',
-                'icon': 'arrow-counterclockwise',
-                'function': async function () { await editor.undo() },
-            },
-            {
-                'tooltip': 'Redo',
-                'icon': 'arrow-clockwise',
-                'function': async function () { await editor.redo() },
-            },
-        ];
-        super(editor, functions, parentDom);
-    }
-}
-
 export class ElementToolsGUI extends ToolsGUI {
     constructor(editor, args, vertical=false) {
         let functions = [
@@ -148,6 +130,16 @@ export class TransformToolsGUI extends ToolsGUI {
     constructor(editor, args, vertical=false) {
         let functions = [
             {
+                'tooltip': 'Undo',
+                'icon': 'arrow-counterclockwise',
+                'function': async function () { await editor.undo() },
+            },
+            {
+                'tooltip': 'Redo',
+                'icon': 'arrow-clockwise',
+                'function': async function () { await editor.redo() },
+            },
+            {
                 'tooltip': 'Translate Tool (T)',
                 'icon': 'arrows-move',
                 'function': function () { editor.control.setMode('translate'); },
@@ -161,7 +153,7 @@ export class TransformToolsGUI extends ToolsGUI {
                 'tooltip': 'Scale Tool (S)',
                 'icon': 'arrows-angle-expand',
                 'function': function () { editor.control.setMode('scale'); },
-            },
+            }
         ];
         super(editor, functions, args, vertical);
     }
@@ -218,24 +210,10 @@ export class MiscGUI extends ToolsGUI {
     constructor(editor, args, vertical=true) {
         let functions = [
             {
-                'tooltip': 'Report a bug!',
-                'icon': 'bug-fill',
-                'function': function () { 
-                    window.open('https://github.com/eszesbalint/DisplayMc/issues', '_blank');
-                },
-            },
-            {
                 'tooltip': 'Keyboard Shortcuts',
                 'icon': 'keyboard',
                 'function': function () { 
                     editor.gui.help.showModal();
-                },
-            },
-            {
-                'tooltip': 'Donate',
-                'icon': 'piggy-bank-fill',
-                'function': function () { 
-                    editor.gui.donate.showModal();
                 },
             },
         ];
